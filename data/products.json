@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Meja Belajar",
+        "price": 200000,
+        "description": "Ini adalah meja belajar",
+        "imageURL": "https://image.shutterstock.com/image-photo/wooden-desk-table-copy-space-600w-1232320237.jpg",
+        "stock": 10,
+        "StoreId": 1
+    },
+    {
+        "name": "Speaker Xiamoay",
+        "price": 100000,
+        "description": "Ini adalah speaker xiaomay",
+        "imageURL": "https://image.shutterstock.com/image-illustration/blue-bluetooth-speaker-on-white-600w-1623771859.jpg",
+        "stock": 18,
+        "StoreId": 2
+    },
+    {
+        "name": "Elder Ring",
+        "price": 150000,
+        "description": "Ini game Elden Ring",
+        "imageURL": "https://image.shutterstock.com/image-photo/xbox-series-playstation-5-controller-600w-2113667840.jpg",
+        "stock": 5,
+        "StoreId": 3
+    },
+    {
+        "name": "Face Mask",
+        "price": 10000,
+        "description": "Ini adalah Face Mask",
+        "imageURL": "https://image.shutterstock.com/image-photo/medical-face-mask-isolated-on-600w-1728766081.jpg",
+        "stock": 8,
+        "StoreId": 4
+    },
+    { 
+        "name": "Pizza",
+        "price": 15000,
+        "description": "Ini adalah Pizza",
+        "imageURL": "https://image.shutterstock.com/image-photo/fresh-homemade-italian-pizza-margherita-600w-1829205563.jpg",
+        "stock": 4,
+        "StoreId": 5
+    },
+    {
+        "name": "Hamburger",
+        "price": 12000,
+        "description": "Ini adalah Hamburger",
+        "imageURL": "https://image.shutterstock.com/image-photo/homemade-burger-grilled-ribs-vegetables-600w-1922203067.jpg",
+        "stock": 4,
+        "StoreId": 5
+    }
+]
