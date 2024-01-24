@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Store</title>
+</head>
+<body style="text-align:center">
+    <h1>Add Store</h1>
+
+    <form action="/store/add" method="post"> 
+        <label >Name Store:</label>
+        <input type="text" id="fname" name="name"><br><br>
+        
+        <label for="category">Choose Category:</label>
+        <select id="category" name="category">
+           <option value="" disabled selected>Select One</option>
+           <% category.forEach(el=>{ %>
+            <option value="<%=el%>"> <%=el%> </option>
+            <% }) %>  
+        </select><br><br>
+        
+        
+        <label for="lname">Since :</label>
+        <input type="date" id="lname" name="since"><br><br>
+        
+        <label for="UserId">Confirm Your Username , Store Is Yours:</label><br>
+        <select id="UserId" name="UserId">
+           <option value="" disabled selected>Select One</option>
+           <% data.forEach(el=>{ %>
+            <option value="<%=el.id%>"> <%=el.username%> </option>
+            <% }) %>  
+        </select><br><br>
+       
+
+        <input type="submit" value="Submit">
+      </form>
+</body>
+</html>

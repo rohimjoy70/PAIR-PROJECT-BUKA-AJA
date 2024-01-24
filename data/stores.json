@@ -3,21 +3,21 @@
         "name": "IkeeAee",
         "category": "Funiture Store",
         "code": "---BukaBesok Funiture---",
-        "since": "12/10/1945",
+        "since": "1945/01/20",
         "UserId": 1
     },
     {
         "name": "MajuMart",
         "category": "Electronics Store",
         "code": "---BukaBesok Electronics---",
-        "since": "01/12/1900",
+        "since": "1900/05/20",
         "UserId": 2
     },
     {
         "name": "Alfatihah",
         "category": "Game Store",
         "code": "---BukaBesok Electronics---",
-        "since": "18/05/2021",
+        "since": "2000/05/17",
         "UserId": 3
 
     },
@@ -25,14 +25,14 @@
         "name": "Titan Colosal",
         "category": "Medical Store",
         "code": "---BukaBesok Medical---",
-        "since": "18/05/2022",
+        "since": "2022/07/28",
         "UserId": 4
     },
     {
         "name": "SetarBug",
         "category": "Food and Beverage",
         "code": "---BukaBesok Food and Beverage---",
-        "since": "05/05/2020",
+        "since": "2020/05/05",
         "UserId": 5
     } 
 ]

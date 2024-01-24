@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile</title>
+</head>
+<body style="text-align: center;">
+    <h1>EDIT YOUR PROFILE</h1>
+    <form action="/register/<%= data.id %>/edit" method="post"> 
+        <label for="fname">Firstname:</label>
+        <input type="text" id="fname" name="firstName" value="<%=data.firstName %>"><br><br>
+        <label for="fname">LastName:</label>
+        <input type="text" id="fname" name="lastName" value="<%=data.lastName %>"><br><br>
+        
+        <label for="lname">Phone Number: </label>
+        <input type="number" id="lname" name="phoneNumber" value="<%=data.phoneNumber%>"><br><br>
+        
+
+        <label for="lname">Email:</label><br>
+        <input type="text" id="lname" name="email" value="<%=data.email %> "><br><br>
+
+        <label for="lname">Gender:</label>
+        <select id="gender" name="gender">
+          <option value="" disabled selected>Select One</option>
+          <option value="male"<%= data.gender === "male" ? "selected" : "" %>>Male</option>
+          <option value="female" <%= data.gender === "female" ? "selected" : "" %>>Female</option>
+        </select><br><br>
+        
+        <label for="lname">Date of Birth:</label>
+        <input type="date" id="lname" name="dateOfBirth" value="<%=data.datebirth%>"><br><br>
+
+
+        <input type="submit" value="Submit">
+      </form>
+</body>
+</html>
