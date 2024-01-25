@@ -47,33 +47,35 @@ class Controller {
    }
 
    static saveProduct(req, res) {
-   const { name, description, price, stock, StoreId, imageURL } = req.body;
-
-   Product.create({
-      name,
-      description,
-      price,
-      stock,
-      StoreId,
-      imageURL,
-   })
-      .then((data) => {
-         res.redirect("/store");
+      const { name, description, price, stock, StoreId, imgURL } = req.body;
+      const Nprice = Number(price);
+      const Nstock = Number(stock);
+      Product.create({
+         name,
+         description,
+         price: Nprice,
+         stock: Nstock,
+         StoreId,
+         imageURL:imgURL,
       })
-      .catch((err) => {
-         const error = {};
-         if (err.name === "SequelizeValidationError") {
-            err.errors.forEach((el) => {
-               if (error[el.path]) {
-                  error[el.path].push(el.message);
-               } else {
-                  error[el.path] = [el.message];
-               }
-            });
-         }
-         res.send(error);
-      });
-}
+         .then((data) => {
+            res.redirect(`/store/${StoreId}`);
+         })
+         .catch((err) => {
+            const error = {};
+            if (err.name === "SequelizeValidationError") {
+               err.errors.forEach((el) => {
+                  if (error[el.path]) {
+                     error[el.path].push(el.message);
+                  } else {
+                     error[el.path] = [el.message];
+                  }
+               });
+            }
+            console.log(err)
+            res.send(err);
+         });
+   }
 
    static deleteProduct(req, res) {
       let id = +req.params.id;

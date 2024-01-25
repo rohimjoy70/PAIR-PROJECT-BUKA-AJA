@@ -22,7 +22,7 @@ module.exports = {
       },
       imageURL: {
         type: Sequelize.STRING,
-        allowNull : false,
+        allowNull : true,
       },
       stock: {
         type: Sequelize.INTEGER,

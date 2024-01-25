@@ -23,7 +23,7 @@ route.get("/logout", Controller.getlogout)
 
 
 route.use(function(req, res, next) {
-    console.log(req.session);
+    // console.log(req.session);
     if(!req.session.userId){
         const error = "Please Login"
         res.redirect(`/?err=${error}`)

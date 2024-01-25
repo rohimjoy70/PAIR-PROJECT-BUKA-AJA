@@ -13,7 +13,6 @@ class Controller {
             return Profile.findAll();
          })
          .then((data1) => {
-            console.log(data1);
             res.render("listStore", { store, convertDate, data1, msg });
          })
          .catch((err) => {

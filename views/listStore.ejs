@@ -57,12 +57,12 @@
                   <td><%= convertDate(el.since) %></td>
                   <td>
                      <a href="/store/<%= el.id %>">
-                        <button type="button" class="btn btn-primary">See Product</button>
+                         <button type="button" class="btn btn-primary" style="margin-right: 5px;">See Product</button>
                      </a>
                      <a href="/store/delete/<%= el.id %>">
-                        <button type="button" class="btn btn-primary">Delete</button>
+                         <button type="button" class="btn btn-danger" style="margin-left: 5px;">Delete</button>
                      </a>
-                  </td>
+                 </td>
                </tr>
                <% }) %>
             </tbody>

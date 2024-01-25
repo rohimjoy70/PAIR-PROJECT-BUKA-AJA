@@ -21,11 +21,11 @@ class Controller {
                   req.session.userId = data.id;
                   return res.redirect("/store");
                } else {
-                  const text = "Cek Dulu Gak Sih Password Sama Username";
+                  const text = "Cek Dulu Gak Sih Password Sama Username Udah Bener Belum!!!";
                   return res.redirect(`/?err=${text}`);
                }
             } else {
-               const text = "Cek Dulu Gak Sih Password Sama Username";
+               const text = "Cek Dulu Gak Sih Password Sama Username Udah Bener Belum!!!";
                return res.redirect(`/?err=${text}`);
             }
          })
@@ -155,21 +155,18 @@ class Controller {
             return res.status(401).send("Invalid username or password");
          }
 
-         // Assuming your User model has a 'role' field
          const role = user.role;
 
-         req.session.user = { username, role }; // Set session with username and role
+         req.session.user = { username, role };
 
          if (role === "admin") {
-            // Redirect to the admin dashboard
             res.redirect("/admin/dashboard");
          } else {
-            // Redirect to the user dashboard
-            res.redirect("/user/dashboard");
+            res.redirect("/customer/dashboard");
          }
       } catch (error) {
-         console.error(error);
-         res.status(500).send("Internal Server Error");
+         console.log(error);
+         res.send(error);
       }
    }
 }

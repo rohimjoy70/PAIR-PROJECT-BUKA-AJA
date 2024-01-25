@@ -48,6 +48,7 @@
             color: #fff;
             text-align: center;
         }
+        
     </style>
     <title>Otw Buka List</title>
 </head>
@@ -82,20 +83,25 @@
 
     <!-- TABLE -->
     <div class="row justify-content-center">
-        <% data.forEach(el => { %>
-        <div class="card m-2" style="width: 18rem;">
-            <img class="card-img-top" src="<%= el.imageURL %>" alt="Card image cap" />
-            <div class="card-body">
-                <h5 class="card-title"><%= el.name %></h5>
-                <p class="card-text"><%= el.description %></p>
-                <h6 class="card-title">STOCK: <%= el.stock %></h6>
-                <h6 class="card-title">Price: <%= money.rupiah(el.price) %></h6>
-                <a href="/product/buy/<%= el.id %>" class="btn btn-primary">Buy</a>
-                <a href="/product/delete/<%= el.id %>" class="btn btn-danger">Delete</a>
-            </div>
-        </div>
-        <% }) %>
+        <% if (data === {}) { %>
+            <p>No products available</p>
+        <% } else { %>
+            <% data.forEach(el => { %>
+                <div class="card m-2" style="width: 18rem;">
+                    <img class="card-img-top" src="<%= el.imageURL %>" alt="Card image cap" />
+                    <div class="card-body">
+                        <h5 class="card-title"><%= el.name %></h5>
+                        <p class="card-text"><%= el.description %></p>
+                        <h6 class="card-title">STOCK: <%= el.stock %></h6>
+                        <h6 class="card-title">Price: <%= money.rupiah(el.price) %></h6>
+                        <a href="/product/buy/<%= el.id %>" class="btn btn-primary">Buy</a>
+                        <a href="/product/delete/<%= el.id %>" class="btn btn-danger">Delete</a>
+                    </div>
+                </div>
+            <% }) %>
+        <% } %>
     </div>
+    
 
     <footer>
         &copy; 2024 Otw Buka List. All Rights Reserved.
