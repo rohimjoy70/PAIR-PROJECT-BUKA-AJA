@@ -8,6 +8,10 @@ product.get("/product", ProductController.listAllProduct)
 
 product.get("/product/buy/:id", ProductController.buyProduct)
 
+product.get("/product/add", ProductController.addProduct)
+product.post("/product/add", ProductController.saveProduct)
+
 product.get("/product/delete/:id", ProductController.deleteProduct)
+
 
 module.exports = product

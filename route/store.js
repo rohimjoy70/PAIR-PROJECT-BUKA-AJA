@@ -9,5 +9,6 @@ store.get("/store/add", StoreController.addStore)
 store.post("/store/add", StoreController.saveStore)
 
 store.get("/store/:id", StoreController.listProductAtStore)
+store.get("/store/delete/:id", StoreController.deleteStore)
 
 module.exports = store

@@ -5,36 +5,77 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Store</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            display: inline-block;
+            text-align: left;
+            margin: 20px;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 15px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
-<body style="text-align:center">
+<body>
     <h1>Add Store</h1>
 
     <form action="/store/add" method="post"> 
-        <label >Name Store:</label>
-        <input type="text" id="fname" name="name"><br><br>
-        
+        <label for="name">Name Store:</label>
+        <input type="text" id="name" name="name" required><br>
+
         <label for="category">Choose Category:</label>
-        <select id="category" name="category">
-           <option value="" disabled selected>Select One</option>
-           <% category.forEach(el=>{ %>
-            <option value="<%=el%>"> <%=el%> </option>
+        <select id="category" name="category" required>
+            <option value="" disabled selected>Select One</option>
+            <% category.forEach(el => { %>
+                <option value="<%= el %>"> <%= el %> </option>
             <% }) %>  
-        </select><br><br>
-        
-        
-        <label for="lname">Since :</label>
-        <input type="date" id="lname" name="since"><br><br>
-        
-        <label for="UserId">Confirm Your Username , Store Is Yours:</label><br>
-        <select id="UserId" name="UserId">
-           <option value="" disabled selected>Select One</option>
-           <% data.forEach(el=>{ %>
-            <option value="<%=el.id%>"> <%=el.username%> </option>
+        </select><br>
+
+        <label for="since">Since:</label>
+        <input type="date" id="since" name="since" required><br>
+
+        <label for="UserId">Confirm Your Username, Store Is Yours:</label>
+        <select id="UserId" name="UserId" required>
+            <option value="" disabled selected>Select One</option>
+            <% data.forEach(el => { %>
+                <option value="<%= el.id %>"> <%= el.username %> </option>
             <% }) %>  
-        </select><br><br>
-       
+        </select><br>
 
         <input type="submit" value="Submit">
-      </form>
+    </form>
 </body>
 </html>

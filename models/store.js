@@ -70,7 +70,7 @@ module.exports = (sequelize, DataTypes) => {
     modelName: 'Store',
     hooks :{
       beforeCreate(instance, options) {
-         instance.code = `---BukaBesok ${instance.category}---`
+         instance.code = `---Otw Buka ${instance.category}---`
       }
     }
   });
