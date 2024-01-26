@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receipt</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .receipt {
+            max-width: 400px;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            padding: 20px;
+        }
+        .receipt h2 {
+            margin-top: 0;
+        }
+        .receipt-item {
+            margin-bottom: 10px;
+        }
+        .receipt-item label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="receipt">
+        <h2>Receipt</h2>
+        <div class="receipt-item">
+            <label>Product:</label>
+            <span><%= product.name %></span>
+        </div>
+        <div class="receipt-item">
+            <label>Price per item:</label>
+            <span>$<%= product.price %></span>
+        </div>
+        <div class="receipt-item">
+            <label>Quantity:</label>
+            <span><%= quantity %></span>
+        </div>
+        <div class="receipt-item">
+            <label>Total:</label>
+            <span>$<%= total %></span>
+        </div>
+        <div class="receipt-item">
+            <label>Buyer:</label>
+            <span><%= user.username %></span>
+        </div>
+    </div>
+</body>
+</html>

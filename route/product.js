@@ -13,5 +13,6 @@ product.post("/product/add", ProductController.saveProduct)
 
 product.get("/product/delete/:id", ProductController.deleteProduct)
 
+product.get("/product/receipt/:id", ProductController.viewReceipt);
 
 module.exports = product

@@ -91,6 +91,20 @@ class Controller {
          res.send(err);
       }
    }
+
+   static async viewReceipt(req, res) {
+      try {
+         const productId = +req.params.id;
+         const product = await Product.findByPk(productId);
+         const user = req.session.userId;
+         const quantity = req.query.quantity || 1;
+         const total = product.price * quantity;
+
+         res.render("receipt", { product, quantity, total, user });
+      } catch (err) {
+         res.send(err);
+      }
+   }
 }
 
 module.exports = Controller;

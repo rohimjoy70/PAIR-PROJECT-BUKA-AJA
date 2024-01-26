@@ -158,9 +158,9 @@ class Controller {
          req.session.user = { username, role };
 
          if (role === "admin") {
-            res.redirect("/admin/dashboard");
+            return res.redirect("/admin/dashboard");
          } else {
-            res.redirect("/customer/dashboard");
+            return res.redirect("/customer/dashboard");
          }
       } catch (error) {
          console.log(error);
