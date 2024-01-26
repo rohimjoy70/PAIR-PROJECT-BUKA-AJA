@@ -40,10 +40,11 @@ class Controller {
 
    static async addProduct(req, res) {
       try {
-         const Store = await Store.findAll();
+         const store = await Store.findAll();
 
-         res.render("addProduct", { Store });
+         res.render("addProduct", { store });
       } catch (err) {
+         console.log(err)
          res.send(err);
       }
    }

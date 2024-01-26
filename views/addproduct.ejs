@@ -70,7 +70,7 @@
 
          <label for="StoreId">Select Store:</label>
          <select id="StoreId" name="StoreId" required>
-            <% Store.forEach(store => { %>
+            <% store.forEach(store => { %>
                <option value="<%= store.id %>"><%= store.name %></option>
             <% }) %>
          </select>
