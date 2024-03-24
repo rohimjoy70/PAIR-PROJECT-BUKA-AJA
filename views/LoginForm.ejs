@@ -101,5 +101,16 @@
 
         <input type="submit" value="Submit">
     </form>
+
+    <script>
+        document.querySelector('form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            setTimeout(function() {
+                // Redirect to home page
+                window.location.href = "/";
+            }, 2000);
+        });
+    </script>
 </body>
 </html>
